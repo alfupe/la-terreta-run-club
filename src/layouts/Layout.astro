@@ -1,0 +1,27 @@
+---
+import Navbar from '../components/Navbar.astro';
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} - Club de Running</title>
+</head>
+<body>
+    <header>
+        <h1>Club de Running</h1>
+        <Navbar />
+    </header>
+
+    <main>
+        <slot />
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Club de Running. Accesibilidad primero.</p>
+    </footer>
+</body>
+</html>
