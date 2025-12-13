@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && prettier --write \"dist/**/*.html\"",
+    "build": "astro build && js-beautify -r \"dist/**/*.html\" && prettier --write \"dist/**/*.css\"",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -12,6 +12,7 @@
     "astro": "^5.16.4"
   },
   "devDependencies": {
+    "js-beautify": "^1.15.4",
     "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.1"
   }

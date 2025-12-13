@@ -1,0 +1,14 @@
+{
+  "indent_size": 2,
+  "indent_char": " ",
+  "max_preserve_newlines": 1,
+  "preserve_newlines": true,
+  "indent_inner_html": true,
+  "brace_style": "collapse",
+  "indent_scripts": "normal",
+  "wrap_line_length": 0,
+  "wrap_attributes": "auto",
+  "unformatted": ["code", "pre"],
+  "content_unformatted": ["pre", "textarea"],
+  "extra_liners": ["head", "body", "/html", "header", "nav", "main", "footer", "/header", "/nav", "/main", "/footer"]
+}
