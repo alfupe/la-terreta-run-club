@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && js-beautify -r 'dist/**/*.html' && prettier --write 'dist/**/*.css'",
+    "build": "astro build && js-beautify -r dist/**/*.html && prettier --write \"dist/**/*.css\"",
     "preview": "astro preview",
     "astro": "astro"
   },
