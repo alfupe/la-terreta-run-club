@@ -156,6 +156,82 @@ body {
     line-height: 22px;
   }
 }
+
+/*****************************/
+/* ------ FORM FIELDS ------ */
+/*****************************/
+.form-field {
+}
+
+.form-field__label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.form-field__control {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #8a9596;
+  border-radius: 4px;
+  background-color: var(--white);
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: -0.015em;
+  color: #546a6d;
+  min-width: 150px;
+  min-height: 46px;
+}
+
+.form-field__control::placeholder {
+  color: #bbc7c8;
+}
+
+.form-field__control:focus {
+  outline: none;
+  border-color: var(--tertiary-accent);
+}
+
+select.form-field__control {
+  appearance: none;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='9' viewBox='0 0 16 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.537 0.263604C15.8885 0.615076 15.8885 1.18557 15.537 1.53704L8.53704 8.53704C8.18557 8.88851 7.61507 8.88851 7.2636 8.53704L0.263602 1.53704C-0.0878696 1.18557 -0.0878696 0.615076 0.263602 0.263604C0.615074 -0.087868 1.18557 -0.087868 1.53704 0.263604L7.90032 6.62688L14.2636 0.263604C14.6151 -0.087868 15.1856 -0.087868 15.537 0.263604Z' fill='%234F4F4F'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+}
+
+/* ------ Month Year Picker ------ */
+.month-year-picker {
+  font-size: 20px;
+}
+
+.month-year-picker__control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 46px;
+}
+
+.month-year-picker__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  all: unset;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.month-year-picker__button img {
+  display: block;
+}
+
+.month-year-picker__button:focus {
+  outline: none;
+  border: 1px solid var(--tertiary-accent);
+}
+
 /****************************/
 /* ------ COMPONENTS ------ */
 /****************************/
@@ -400,6 +476,75 @@ body {
   background: #f74a10;
 }
 
+/* ------ Filters ------ */
+.filters {
+  background-color: var(--white);
+  padding: 16px;
+}
+
+.filters--desktop {
+  display: none;
+}
+
+.filters__details {
+  position: relative;
+}
+
+.filters__toggler {
+  list-style: none;
+  cursor: pointer;
+  color: var(--tertiary-accent);
+}
+
+.filters__toggler::-webkit-details-marker {
+  display: none;
+}
+
+details[open] .filters__toggler-icon {
+  transform: rotate(180deg);
+}
+
+.filters__form {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 16px;
+  gap: 24px;
+  background: var(--white);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+  right: -3px;
+  min-width: 260px;
+}
+
+@media (min-width: 768px) {
+  .filters {
+    display: block;
+    padding: 0;
+  }
+
+  .filters--mobile {
+    display: none;
+  }
+
+  .filters__toggler {
+    display: none;
+  }
+
+  .filters__form {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
 /************** REVISAR ***************/
 /* Main */
 main {
