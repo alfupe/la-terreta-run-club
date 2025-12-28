@@ -11,9 +11,6 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
     <style>
-      main {
-      }
-
       .row {
         display: flex;
         align-items: center;
@@ -21,20 +18,8 @@
         padding: 6px;
       }
 
-      .row--dark {
-        background: #989898;
-      }
-
       .row--justify-end {
         justify-content: flex-end;
-      }
-
-      .box {
-        margin-bottom: 24px;
-      }
-
-      .box--mobile {
-        width: 320px;
       }
     </style>
   </head>
@@ -42,7 +27,93 @@
     <h1>Componentes</h1>
 
     <main>
-      <div class="box box--mobile">
+      <section class="layout-section layout-section--boxed">
+        <code><strong>Typography</strong></code>
+        <br />
+        <h1 class="page-title">.page-title</h1>
+        <h2 class="section-title">.section-title</h2>
+        <h2 class="body-title">.body-title</h2>
+        <h2 class="block-title">.block-title</h2>
+        <h2 class="single-title">.single-title</h2>
+        <h2 class="caption">.caption</h2>
+        <p class="body-text">.body-text</p>
+      </section>
+
+      <section class="layout-section">
+        <code><strong>Hero block</strong></code>
+        <section class="hero-block">
+          <figure class="hero-block__image-container">
+            <img
+              class="hero-block__image"
+              src="assets/images/slider-actividades.jpg"
+              alt="15K Nocturna"
+            />
+            <img
+              class="hero-block__image"
+              src="assets/images/slider-actividades.jpg"
+              alt="15K Nocturna"
+            />
+          </figure>
+          <div class="hero-block__details">
+            <div class="hero-block__info">
+              <h2 class="section-title">Últimas actividades</h2>
+              <div>
+                <span class="body-title">15K nocturna</span>
+                <span class="body-text">· 21 sep 2025</span>
+              </div>
+            </div>
+            <a href="#" class="button button--primary button--small">Ver todas</a>
+            <div class="dots-indicators">
+              <div class="dot-indicator"></div>
+              <div class="dot-indicator"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="layout-section layout-section--boxed">
+        <code><strong>Photo/Text block</strong></code>
+        <section class="photo-text-block">
+          <div class="photo-text-block__image-container">
+            <img
+              class="photo-text-block__image"
+              src="assets/images/silueta-corredores.jpg"
+              alt="Silueta de 3 corredores al atardecer"
+            />
+          </div>
+          <div class="photo-text-block__details">
+            <div class="photo-text-block__info">
+              <h2 class="body-title">Corremos la terreta juntos</h2>
+              <p class="body-text">
+                En La Terreta Run Club creemos que correr es más que sumar kilómetros: es descubrir
+                la ciudad, compartir energía y construir una comunidad con identidad propia.
+              </p>
+            </div>
+            <a href="#" class="button button--primary button--small">Conócenos</a>
+          </div>
+        </section>
+        <section class="photo-text-block">
+          <div class="photo-text-block__details">
+            <div class="photo-text-block__info">
+              <h2 class="body-title">Corremos la terreta juntos</h2>
+              <p class="body-text">
+                En La Terreta Run Club creemos que correr es más que sumar kilómetros: es descubrir
+                la ciudad, compartir energía y construir una comunidad con identidad propia.
+              </p>
+            </div>
+            <a href="#" class="button button--primary button--small">Conócenos</a>
+          </div>
+          <div class="photo-text-block__image-container">
+            <img
+              class="photo-text-block__image"
+              src="assets/images/silueta-corredores.jpg"
+              alt="Silueta de 3 corredores al atardecer"
+            />
+          </div>
+        </section>
+      </section>
+
+      <section class="layout-section layout-section--boxed">
         <code><strong>Product Card</strong></code>
         <article class="product-card">
           <figure class="product-card__image-container">
@@ -60,9 +131,9 @@
             <button class="button button--primary button--small">¡Lo quiero!</button>
           </div>
         </article>
-      </div>
+      </section>
 
-      <div class="box box--mobile">
+      <section class="layout-section layout-section--boxed">
         <code><strong>Activity Card</strong></code>
         <article class="activity-card">
           <figure class="activity-card__image-container">
@@ -96,9 +167,9 @@
             <button class="button button--primary button--small">Ver más</button>
           </div>
         </article>
-      </div>
+      </section>
 
-      <div class="box">
+      <section class="layout-section layout-section--boxed">
         <code><strong>Community Card</strong></code>
         <br />
         <code>Regular</code>
@@ -141,9 +212,9 @@
             <div class="community-card__details">
               <div class="chip">Testimonio</div>
               <div class="community-card__info">
-                <div class="community-card__dots-indicators">
-                  <div class="community-card__dot-indicator"></div>
-                  <div class="community-card__dot-indicator"></div>
+                <div class="dots-indicators">
+                  <div class="dot-indicator"></div>
+                  <div class="dot-indicator"></div>
                 </div>
                 <div class="community-card__date">21 sep 2025</div>
                 <h2 class="community-card__title">
@@ -154,9 +225,9 @@
             </div>
           </article>
         </div>
-      </div>
+      </section>
 
-      <div class="box">
+      <section class="layout-section layout-section--boxed">
         <code><strong>Button</strong></code>
         <br />
         <code>Primary</code>
@@ -177,9 +248,9 @@
           <button class="button button--tertiary button--medium">medium</button>
           <button class="button button--tertiary button--large">large</button>
         </div>
-      </div>
+      </section>
 
-      <div class="box">
+      <section class="layout-section layout-section--boxed">
         <code><strong>Chip</strong></code>
         <br />
         <div class="row">
@@ -188,9 +259,9 @@
           <div class="chip chip--warning">Media</div>
           <div class="chip chip--danger">Difícil</div>
         </div>
-      </div>
+      </section>
 
-      <div class="box">
+      <section class="layout-section layout-section--boxed">
         <code><strong>Filters</strong></code>
         <br />
         <div class="row row--justify-end">
@@ -285,9 +356,9 @@
             </form>
           </section>
         </div>
-      </div>
+      </section>
 
-      <div class="box">
+      <section class="layout-section layout-section--boxed">
         <code><strong>Form fields</strong></code>
         <br />
         <div class="row">
@@ -323,7 +394,53 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section class="layout-section">
+        <code><strong>CTA</strong></code>
+        <div class="cta">
+          <h2 class="section-title cta__title">Todos los martes A LAS 20:00h en el viejo cauce</h2>
+          <div>
+            <a href="#" class="button button--tertiary button--medium">Únete</a>
+          </div>
+        </div>
+      </section>
+
+      <code><strong>Header</strong></code>
+      <header class="header">
+        <div class="header__container">
+          <a href="index.html" class="header__logo">
+            <img
+              src="assets/svg/la-terrete-run-club-logo-landscape.svg"
+              alt="Logo principal de La Terreta Run Club"
+            />
+          </a>
+
+          <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false">
+            <span class="header__hamburger"></span>
+          </button>
+
+          <nav class="header__nav" id="main-nav">
+            <ul class="header__menu">
+              <li class="header__item">
+                <a href="actividades.html" class="header__link">Actividades</a>
+              </li>
+              <li class="header__item">
+                <a href="unete.html" class="header__link">Únete</a>
+              </li>
+              <li class="header__item">
+                <a href="tienda.html" class="header__link">Tienda</a>
+              </li>
+              <li class="header__item">
+                <a href="comunidad.html" class="header__link">Comunidad</a>
+              </li>
+              <li class="header__item">
+                <a href="acerca-de.html" class="header__link">Acerca de</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
     </main>
   </body>
 </html>

@@ -157,6 +157,25 @@ body {
   }
 }
 
+/****************************/
+/* ------ TYPOGRAPHY ------ */
+/****************************/
+.layout-section {
+}
+
+.layout-section--boxed {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .layout-section--boxed {
+    padding-left: 16px;
+    max-width: 1224px;
+    margin: 0 auto;
+  }
+}
+
 /*****************************/
 /* ------ FORM FIELDS ------ */
 /*****************************/
@@ -307,6 +326,7 @@ select.form-field__control {
   border-radius: 24px;
   overflow: hidden;
   background: var(--medium-light-grey);
+  max-width: 392px;
 }
 
 .product-card__image-container {
@@ -332,11 +352,118 @@ select.form-field__control {
   font-size: 16px;
 }
 
+/* ------ Hero Block ------ */
+.hero-block {
+  position: relative;
+}
+
+.hero-block__image-container {
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  cursor: grab;
+}
+
+.hero-block__image-container::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-block__image-container .hero-block__image {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.hero-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-block__image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-block__details {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 48px;
+  color: var(--white);
+  gap: 24px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-block__details a {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.hero-block__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ------ Activity Card ------ */
+.photo-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.photo-text-block__image-container {
+  flex: 1;
+}
+
+.photo-text-block__image {
+  display: block;
+  width: 100%;
+}
+
+.photo-text-block__details {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.photo-text-block__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (min-width: 768px) {
+  .photo-text-block {
+    flex-direction: row;
+    gap: 124px;
+  }
+
+  .photo-text-block__details {
+    justify-content: center;
+  }
+}
+
 /* ------ Activity Card ------ */
 .activity-card {
   border-radius: 24px;
   overflow: hidden;
   background: var(--medium-light-grey);
+  max-width: 392px;
 }
 
 .activity-card__image-container {
@@ -463,21 +590,6 @@ select.form-field__control {
 .community-card__title {
   font-size: 20px;
 }
-
-.community-card__dots-indicators {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  justify-content: center;
-  padding: 8px;
-}
-
-.community-card__dot-indicator {
-  background: var(--white);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
 /* ------ Chip ------ */
 .chip {
   display: inline-flex;
@@ -583,49 +695,90 @@ details[open] .filters__toggler-icon {
     right: 0;
   }
 }
-/************** REVISAR ***************/
-/* Main */
-main {
-  flex: 1;
+
+/* ------ Dots indicators ------ */
+.dots-indicators {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  padding: 8px;
 }
 
-/* Bloque Header */
+.dot-indicator {
+  background: var(--white);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* ------ CTA ------ */
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background: radial-gradient(
+    136.21% 776.62% at 50% 312.94%,
+    var(--primary-accent) 0.25%,
+    var(--secondary-accent) 50.29%
+  );
+  padding: 32px;
+}
+
+.cta__title {
+  text-align: center;
+  flex: 1;
+  color: var(--tertiary-accent);
+}
+
+@media (min-width: 768px) {
+  .cta {
+    flex-direction: row;
+    padding: 75px;
+    gap: 48px;
+  }
+
+  .cta__title {
+    text-align: left;
+  }
+}
+
+/************************/
+/* ------ HEADER ------ */
+/************************/
 .header {
   position: relative;
-  background-color: white;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: var(--black);
+  padding: 16px;
 }
 
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .header__logo {
-  font-weight: 800;
-  font-size: 1.5rem;
-  color: var(--color-primary);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: -1px;
+  display: flex;
+  align-items: center;
 }
 
-/* Menú de navegación (Móvil por defecto) */
+.header__logo img {
+  display: block;
+}
+
 .header__nav {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
   width: 100%;
-  background-color: white;
+  background-color: var(--black);
   position: absolute;
   top: 100%;
   left: 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 1;
 }
 
 .header__nav--open {
@@ -634,12 +787,12 @@ main {
 
 .header__menu {
   list-style: none;
-  padding: 1rem;
-  text-align: center;
+  color: var(--white);
+  padding: 16px;
 }
 
 .header__item {
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 
 .header__item:last-child {
@@ -648,16 +801,17 @@ main {
 
 .header__link {
   text-decoration: none;
-  color: var(--color-primary);
-  font-weight: 500;
+  color: var(--white);
+  font-weight: 700;
+  text-transform: uppercase;
   display: block;
+  font-style: italic;
 }
 
 .header__link:hover {
-  color: var(--color-accent);
+  color: var(--primary-accent);
 }
 
-/* Botón Hamburguesa */
 .header__toggle {
   display: block;
   background: none;
@@ -670,7 +824,7 @@ main {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: var(--color-primary);
+  background-color: var(--white);
   position: relative;
   transition: background-color 0.3s;
 }
@@ -681,7 +835,7 @@ main {
   position: absolute;
   width: 25px;
   height: 3px;
-  background-color: var(--color-primary);
+  background-color: var(--white);
   left: 0;
   transition: top 0.3s;
 }
@@ -694,8 +848,11 @@ main {
   top: 8px;
 }
 
-/* Versión Desktop */
 @media (min-width: 768px) {
+  .header {
+    padding: 8px 70px;
+  }
+
   .header__toggle {
     display: none;
   }
@@ -713,13 +870,18 @@ main {
 
   .header__menu {
     display: flex;
-    gap: 2rem;
+    gap: 32px;
     padding: 0;
   }
 
   .header__item {
     margin-bottom: 0;
   }
+}
+/************** REVISAR ***************/
+/* Main */
+main {
+  flex: 1;
 }
 
 /* --- Footer --- */
