@@ -18,11 +18,7 @@
       <div class="header__container">
         <a href="index.html" class="header__logo">La Terreta Run Club</a>
 
-        <button class="header__toggle" aria-label="Abrir menú" aria-expanded="false">
-          <span class="header__hamburger"></span>
-        </button>
-
-        <nav class="header__nav" id="main-nav">
+        <nav class="header__nav header__nav--desktop">
           <ul class="header__menu">
             <li class="header__item">
               <a href="index.html" class="header__link">Inicio</a>
@@ -35,6 +31,25 @@
             </li>
           </ul>
         </nav>
+
+        <details class="header__details">
+          <summary class="header__summary" aria-label="Abrir menú">
+            <span class="header__hamburger"></span>
+          </summary>
+          <nav class="header__nav header__nav--mobile">
+            <ul class="header__menu">
+              <li class="header__item">
+                <a href="index.html" class="header__link">Inicio</a>
+              </li>
+              <li class="header__item">
+                <a href="entrenamientos.html" class="header__link">Entrenamientos</a>
+              </li>
+              <li class="header__item">
+                <a href="contacto.html" class="header__link">Contacto</a>
+              </li>
+            </ul>
+          </nav>
+        </details>
       </div>
     </header>
     <!-- End: Header -->
@@ -58,8 +73,5 @@
     </footer>
     <!-- End: Footer -->
 
-    <!-- Common scripts -->
-    <script src="js/app.js"></script>
-    <!-- End: Common scripts -->
   </body>
 </html>

@@ -785,7 +785,32 @@ details[open] .filters__toggler-icon {
   display: block;
 }
 
-.header__nav {
+.header__nav--desktop {
+  display: none;
+}
+
+.header__details {
+  display: block;
+}
+
+.header__summary {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  list-style: none;
+}
+
+.header__summary::-webkit-details-marker {
+  display: none;
+}
+
+.header__summary::marker {
+  content: '';
+}
+
+.header__nav--mobile {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
@@ -797,7 +822,7 @@ details[open] .filters__toggler-icon {
   z-index: 1;
 }
 
-.header__nav--open {
+.header__details[open] .header__nav--mobile {
   max-height: 500px;
 }
 
@@ -826,14 +851,6 @@ details[open] .filters__toggler-icon {
 
 .header__link:hover {
   color: var(--primary-accent);
-}
-
-.header__toggle {
-  display: block;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
 }
 
 .header__hamburger {
@@ -869,18 +886,14 @@ details[open] .filters__toggler-icon {
     padding: 8px 70px;
   }
 
-  .header__toggle {
+  .header__details {
     display: none;
   }
 
-  .header__nav {
-    max-height: none;
-    overflow: visible;
+  .header__nav--desktop {
+    display: block;
     position: static;
     width: auto;
-    box-shadow: none;
-    display: block;
-    transition: none;
     background-color: transparent;
   }
 
