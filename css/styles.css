@@ -1593,6 +1593,44 @@ details[open] .filters__toggler-icon {
 
 /* ------ Points of interest ------ */
 .points-of-interest-slider {
+  position: relative;
 }
+
 .points-of-interest-slider__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .points-of-interest-slider {
+    margin-right: calc(50% - 50vw);
+    padding-right: calc(50vw - 50% + 24px);
+  }
+
+  .points-of-interest-slider__container {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .points-of-interest-slider__container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .points-of-interest-slider__container .activity-card {
+    flex: 0 0 600px;
+    max-width: 600px;
+    scroll-snap-align: start;
+  }
+
+  .points-of-interest-slider__container .activity-card__image-container {
+    aspect-ratio: 600 / 460;
+  }
+
+  .points-of-interest-slider__container .activity-card__image {
+    height: 100%;
+  }
 }
