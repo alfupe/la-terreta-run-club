@@ -525,7 +525,7 @@ main {
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   column-gap: 16px;
   row-gap: 32px;
 }
@@ -556,6 +556,10 @@ main {
 
   .row--roomy {
     gap: 124px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -710,7 +714,7 @@ select.form-field__control {
   border-radius: 24px;
   overflow: hidden;
   background: var(--medium-light-grey);
-  max-width: 392px;
+  width: 100%;
 }
 
 .product-card__image-container {
@@ -734,6 +738,12 @@ select.form-field__control {
 
 .product-card__price {
   font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  .product-card {
+    max-width: 392px;
+  }
 }
 
 /* ------ Hero Block ------ */
@@ -859,7 +869,7 @@ select.form-field__control {
   border-radius: 24px;
   overflow: hidden;
   background: var(--medium-light-grey);
-  max-width: 392px;
+  width: 100%;
 }
 
 .activity-card__image-container {
@@ -912,12 +922,17 @@ select.form-field__control {
   gap: 4px;
 }
 
+@media (min-width: 768px) {
+  .activity-card {
+    max-width: 392px;
+  }
+}
+
 /* ------ Community Card ------ */
 .community-card {
   border-radius: 24px;
   overflow: hidden;
   position: relative;
-  max-width: 392px;
   min-width: 0;
   width: 100%;
 }
@@ -965,6 +980,7 @@ select.form-field__control {
   .community-card {
     flex: 0 0 392px;
     width: auto;
+    max-width: 392px;
   }
 }
 
