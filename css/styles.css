@@ -926,6 +926,10 @@ select.form-field__control {
   .activity-card {
     max-width: 392px;
   }
+
+  .activity-card__title {
+    min-height: 50px;
+  }
 }
 
 /* ------ Community Card ------ */
