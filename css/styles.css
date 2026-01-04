@@ -476,8 +476,8 @@ body {
   }
 
   .body-text {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .block-title {
@@ -486,8 +486,8 @@ body {
   }
 
   .single-title {
-    font-size: 48px;
-    line-height: 68px;
+    font-size: 42px;
+    line-height: 52px;
   }
 
   .caption {
@@ -884,6 +884,9 @@ select.form-field__control {
 .activity-card__date {
   font-size: 10px;
   font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .activity-card__title {
@@ -1012,6 +1015,7 @@ select.form-field__control {
   justify-content: center;
   border: 1px solid #cdcdcd;
   border-radius: 16px;
+  font-weight: 400;
 }
 
 .chip--success::before,
@@ -1034,6 +1038,10 @@ select.form-field__control {
 
 .chip--danger::before {
   background: #f74a10;
+}
+
+.chip--featured {
+  background: var(--medium-light-grey);
 }
 
 /* ------ Filters ------ */
@@ -1547,7 +1555,44 @@ details[open] .filters__toggler-icon {
   }
 }
 
-/* ------ Testimonials ------ */
+/* ------ Social Links ------ */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+
+.social-links__item {
+}
+
+.social-links__link {
+  text-decoration: none;
+}
+
+/* ------ Sorting Form ------ */
 .sorting__form .form-field {
   max-width: 280px;
+}
+
+/* ------ Single Post ------ */
+.single-post {
+}
+
+.single-post__metadata {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+  font-weight: 300;
+}
+
+.single-post__contents p {
+  margin-bottom: 16px;
+}
+
+/* ------ Points of interest ------ */
+.points-of-interest-slider {
+}
+.points-of-interest-slider__container {
 }
