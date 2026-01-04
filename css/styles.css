@@ -1543,10 +1543,14 @@ details[open] .filters__toggler-icon {
 }
 
 .single-product__image-container {
+  flex: 1;
 }
 
 .single-product__image {
   display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .single-product__details {
@@ -1554,6 +1558,7 @@ details[open] .filters__toggler-icon {
   flex-direction: column;
   gap: 32px;
   align-items: flex-start;
+  flex: 1;
 }
 
 .single-product__info {
@@ -1576,6 +1581,7 @@ details[open] .filters__toggler-icon {
   .single-product {
     flex-direction: row;
     gap: 48px;
+    align-items: flex-start;
   }
 }
 
